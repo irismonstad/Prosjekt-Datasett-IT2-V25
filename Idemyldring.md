@@ -19,3 +19,13 @@
 - utforske og vurdere alternative løsninger for design og implementering av et program
 
 ## Ideer til datasett
+- [Datasett med 45k+ bøker fra goodreads](https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks)
+  - Forekomst av ord i titler (begrens til engelske bøker)
+    - Sammenlikne med ord i titler fra [netflix](https://www.kaggle.com/datasets/shivamb/netflix-shows)? 
+  - Gjennomsnittlig sidetall
+  - Forhold mellom text ratings og ratings
+  - 
+- [Airbnb New York City](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data)
+  - Airbnb aktivitet i NYC i 2019
+  - Har data som navn på host, nabolag, lat/lon og pris
+- 
