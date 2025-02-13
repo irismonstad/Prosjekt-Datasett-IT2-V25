@@ -19,7 +19,7 @@
 - utforske og vurdere alternative løsninger for design og implementering av et program
 
 ## Ideer til datasett
-- [Datasett med 45k+ bøker fra goodreads](https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks)
+- [Datasett med 10k+ bøker fra goodreads](https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks)
   - Forekomst av ord i titler (begrens til engelske bøker)
     - Sammenlikne med ord i titler fra [netflix](https://www.kaggle.com/datasets/shivamb/netflix-shows)? 
   - Gjennomsnittlig sidetall
