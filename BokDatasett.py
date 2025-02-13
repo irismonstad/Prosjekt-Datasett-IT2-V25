@@ -62,6 +62,8 @@ for book in data:
 names = ["0-10", "10-100", "100-200", "200-300", "300-400", "400-500", "500-600", "600-700", "700-800", "800-900", "900-1000", "1000+"]
 values = [pageCounts["zeroToTen"], pageCounts["tenToHundred"], pageCounts["HundredToTwo"], pageCounts["TwoToThree"], pageCounts["ThreeToFour"], pageCounts["FourToFive"], pageCounts["FiveToSix"], pageCounts["SixToSeven"], pageCounts["SevenToEight"], pageCounts["EightToNine"], pageCounts["NineToK"], pageCounts["ThousandPlus"]]
 
+
+#Legg in prosent på y aksen til høyre?
 plt.figure()
 plt.bar(names, values)
 plt.xlabel("Sidetall")
