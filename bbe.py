@@ -9,6 +9,7 @@ with open('books_1.Best_Books_Ever.csv', 'r', encoding='utf-8') as f:
 totalPages = 0
 booksSkipped = 0
 
+#Burde utvides for å ekskludere lydbøker o.l.
 for book in data:
     try:
         totalPages += int(book[12])
