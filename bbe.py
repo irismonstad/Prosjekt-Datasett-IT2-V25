@@ -6,4 +6,14 @@ with open('books_1.Best_Books_Ever.csv', 'r', encoding='utf-8') as f:
     next(reader)
     data = list(reader)
 
-print(len(data))
+totalPages = 0
+booksSkipped = 0
+
+for book in data:
+    try:
+        totalPages += int(book[12])
+    except ValueError:
+        booksSkipped += 1
+
+averagePagecount = int(totalPages/(len(data)-booksSkipped))
+print(f"Gjennomsnittlig sidetall: {averagePagecount}")
