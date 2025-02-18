@@ -28,4 +28,4 @@
 - [Airbnb New York City](https://www.kaggle.com/datasets/dgomonov/new-york-city-airbnb-open-data)
   - Airbnb aktivitet i NYC i 2019
   - Har data som navn på host, nabolag, lat/lon og pris
-- 
+- [Annet bok-datasett](https://github.com/scostap/goodreads_bbe_dataset/blob/main/Best_Books_Ever_dataset/books_1.Best_Books_Ever.csv)
