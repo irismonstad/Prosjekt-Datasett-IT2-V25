@@ -81,11 +81,15 @@ y = []
 
 for book in data:
     try:
-        x.append(float(book[4]))
-        y.append(float(book[17]))
+        float(book[4])
+        float(book[12])
     except ValueError:
-        pass
+        continue
+    if float(book[12]) < 1000:
+        x.append(float(book[4]))
+        y.append(float(book[12]))
 
+print(len(x), len(y))
 
 plt.figure()
 plt.scatter(x, y)
