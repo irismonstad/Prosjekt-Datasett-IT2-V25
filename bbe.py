@@ -67,7 +67,7 @@ names = ["0-10", "10-100", "100-200", "200-300", "300-400", "400-500", "500-600"
 values = [pageCounts["zeroToTen"], pageCounts["tenToHundred"], pageCounts["HundredToTwo"], pageCounts["TwoToThree"], pageCounts["ThreeToFour"], pageCounts["FourToFive"], pageCounts["FiveToSix"], pageCounts["SixToSeven"], pageCounts["SevenToEight"], pageCounts["EightToNine"], pageCounts["NineToK"], pageCounts["ThousandPlus"]]
 
 #Legg in prosent på y aksen til høyre?
-plt.figure()
+plt.figure(figsize=(12,5))
 plt.bar(names, values)
 plt.xlabel("Sider")
 plt.ylabel("Bøker")
@@ -89,9 +89,7 @@ for book in data:
         x.append(float(book[4]))
         y.append(float(book[12]))
 
-print(len(x), len(y))
-
 plt.figure()
-plt.scatter(x, y)
+plt.scatter(x, y, s=5, alpha=0.2)
 plt.show()
 
