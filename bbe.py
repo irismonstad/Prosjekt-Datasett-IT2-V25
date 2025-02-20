@@ -73,3 +73,21 @@ plt.xlabel("Sider")
 plt.ylabel("Bøker")
 plt.title("Bøker fordelt etter antall sider")
 plt.show()
+
+
+#Forhold mellom ratings og num ratings
+x = []
+y = []
+
+for book in data:
+    try:
+        x.append(float(book[4]))
+        y.append(float(book[17]))
+    except ValueError:
+        pass
+
+
+plt.figure()
+plt.scatter(x, y)
+plt.show()
+
