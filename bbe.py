@@ -91,5 +91,8 @@ for book in data:
 
 plt.figure()
 plt.scatter(x, y, s=5, alpha=0.2)
+plt.ylabel("Sider")
+plt.xlabel("Rating i stjerner")
+plt.title("Forhold mellom antall sider og rating")
 plt.show()
 
