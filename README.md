@@ -28,6 +28,12 @@ Med unntak av noen forbestemte ideer, som gjennomsnittlige sidetall, har jeg sto
 |   	|   	|   	|
 |   	|   	|   	|
 
+**Idéer videre:**
+- Se på statistikk for språk
+  - Får noen språk bedre ratings? 
+- Sammenheng mellom utgivelsesår og ratings
+  - Utvikling over tid?
+  
 
 ## For å kjøre koden:
 **.py fil:**
