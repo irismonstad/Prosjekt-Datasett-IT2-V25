@@ -82,17 +82,19 @@ y = []
 for book in data:
     try:
         float(book[4])
-        float(book[12])
+        float(book[17])
     except ValueError:
         continue
-    if float(book[12]) < 1000:
+    #Jeg har begrenset figuren til å bare inkludere bøker med mindre enn 1 million ratings, fordi størsteparten av figuren blir en liten klump hvis man inkludererer de med mer. 
+    #Det vil kanskje være akuelt å kutte dette ned enda mer, f.eks. til 0.5 millioner, for å bedre kunne se forholdet. 
+    if float(book[17]) < 1000000:
         x.append(float(book[4]))
-        y.append(float(book[12]))
+        y.append(float(book[17]))
 
 plt.figure()
 plt.scatter(x, y, s=5, alpha=0.2)
-plt.ylabel("Sider")
+plt.ylabel("Antall ratings i millioner")
 plt.xlabel("Rating i stjerner")
-plt.title("Forhold mellom antall sider og rating")
+plt.title("Forhold mellom antall ratings og gjennomsnittlig rating")
 plt.show()
 
