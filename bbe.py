@@ -19,7 +19,7 @@ for book in data:
         booksSkipped += 1
 
 averagePagecount = int(totalPages/(len(data)-booksSkipped))
-print(f"Gjennomsnittlig sidetall: {averagePagecount}")
+print(f"Gjennomsnittlig sidetall: {averagePagecount}", "\n")
 
 
 #Samler antall bøker for hver mengde sider i en ordbok
@@ -74,8 +74,6 @@ plt.bar(names, values)
 plt.xlabel("Sider")
 plt.ylabel("Bøker")
 plt.title("Bøker fordelt etter antall sider")
-#plt.show()
-
 
 #Forhold mellom ratings og num ratings
 x = []
@@ -98,7 +96,7 @@ plt.scatter(x, y, s=5, alpha=0.2)
 plt.ylabel("Antall ratings i millioner")
 plt.xlabel("Rating i stjerner")
 plt.title("Forhold mellom antall ratings og gjennomsnittlig rating")
-#plt.show()
+
 
 sjangre = []
 
@@ -118,6 +116,35 @@ flat_sjangre = [genre for sublist in sjangre for genre in sublist] #Sjangre er n
 forekomst = Counter(flat_sjangre)
 top10 = forekomst.most_common(10) #Most common er også fra collections, og erstatter manuell sortering
 
-print("Sjanger           ", "Forekomst")
+print("Sjanger           ", "Forekomst","\n")
 for sjanger, forekomst in top10:
     print(f"{sjanger:20} {forekomst}") #Setter av 20 karakterer til sjanger, slik at output ser bedre ut
+
+
+språk = {}
+
+for book in data: 
+    language = book[6]
+    if language in språk.keys():
+        språk[language] += 1
+    else:
+        språk[language] = 1
+
+del språk["English"], språk[""] #Sletter språk og verdi for engelsk og bøker uten spesifisert språk. Engelsk fordi det er mer interessant å se på hvilke ikke-engelske bøker som er på listen.
+
+språkliste = list(språk.items())
+sortert = sorted(språkliste, key=lambda x: x[1], reverse=True) #Bruker sorted funksjonen for å sortere dem etter forekomst, slik at kakediagram ser ryddig ut
+
+#Sorterer språk og forekomst inn i lister jeg kan bruke til å lage kakediagrammet
+data = []
+labels = []
+
+for pairs in sortert:
+    labels.append(pairs[0])
+    data.append(pairs[1])
+
+labels[10:] = [""]*len(labels[10:]) #Fjerner navn på språk etter de 10 største, slik at navnene ikke overlapper i diagrammet.
+plt.figure(figsize=(7,7))
+plt.title("De mest vanlige språkene, ekskludert engelsk")
+plt.pie(data, labels=labels)
+plt.show()  
