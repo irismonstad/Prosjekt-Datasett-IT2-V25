@@ -23,7 +23,7 @@ Med unntak av noen forbestemte ideer, som gjennomsnittlige sidetall, har jeg sto
 |---	|---	|---	|
 |   Gjennomsnittlig sidetall	|   X	|   X	|
 |   Stolpediagram sidetall	|   X	|   X	|
-|   Forhold sidetall + rating	|   X	|   	|
+|   Forhold numratings + rating	|   X	|   	|
 |   Forekomst av sjangre	|   	|   X	|
 |   	|   	|   	|
 |   	|   	|   	|
