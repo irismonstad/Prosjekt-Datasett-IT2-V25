@@ -118,6 +118,6 @@ flat_sjangre = [genre for sublist in sjangre for genre in sublist] #Sjangre er n
 forekomst = Counter(flat_sjangre)
 top10 = forekomst.most_common(10) #Most common er også fra collections, og erstatter manuell sortering
 
-print("sjanger           ", "forekomst")
+print("Sjanger           ", "Forekomst")
 for sjanger, forekomst in top10:
-    print(f"{sjanger:20} {forekomst}")
+    print(f"{sjanger:20} {forekomst}") #Setter av 20 karakterer til sjanger, slik at output ser bedre ut

@@ -24,7 +24,7 @@ Med unntak av noen forbestemte ideer, som gjennomsnittlige sidetall, har jeg sto
 |   Gjennomsnittlig sidetall	|   X	|   X	|
 |   Stolpediagram sidetall	|   X	|   X	|
 |   Forhold numratings + rating	|   X	|   	|
-|   Forekomst av sjangre	|   	|   X	|
+|   Forekomst av sjangre	|   X	|   X	|
 |   Største språk (uten engelsk)	|   	|   X	|
 |   	|   	|   	|
 
