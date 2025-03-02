@@ -1,5 +1,7 @@
 import csv
 import matplotlib.pyplot as plt
+from collections import Counter
+import json
 
 with open('books_1.Best_Books_Ever.csv', 'r', encoding='utf-8') as f:
     reader = csv.reader(f)
@@ -72,7 +74,7 @@ plt.bar(names, values)
 plt.xlabel("Sider")
 plt.ylabel("Bøker")
 plt.title("Bøker fordelt etter antall sider")
-plt.show()
+#plt.show()
 
 
 #Forhold mellom ratings og num ratings
@@ -96,5 +98,26 @@ plt.scatter(x, y, s=5, alpha=0.2)
 plt.ylabel("Antall ratings i millioner")
 plt.xlabel("Rating i stjerner")
 plt.title("Forhold mellom antall ratings og gjennomsnittlig rating")
-plt.show()
+#plt.show()
 
+sjangre = []
+
+#fordi sjangre i datasettet er formattert "'xxxx', 'xxxxx', 'xxxx'", må jeg først gjøre dette om til lister jeg kan telle meg gjennom
+
+for book in data:
+    sjanger = book[8]
+
+    if sjanger.strip(): #Sjekker at boken har sjangre
+        formattertsjanger = sjanger.replace("'", '"') #Bytter ut apostrofer med hermetegn
+        sjangre.append(json.loads(formattertsjanger)) 
+
+flat_sjangre = [genre for sublist in sjangre for genre in sublist] #Sjangre er nå en liste av lister, dette gjør den om til én stor liste.
+
+#Bruker det counter fra det innebygde biblioteket collections, som har funksjonalitet for å telle forekomster i en liste
+#Jeg kunne alternativt gått gjennom listen og lagt til i en ordbok, for så å sortere etter høyeste forekomst
+forekomst = Counter(flat_sjangre)
+top10 = forekomst.most_common(10) #Most common er også fra collections, og erstatter manuell sortering
+
+print("sjanger           ", "forekomst")
+for sjanger, forekomst in top10:
+    print(f"{sjanger:20} {forekomst}")
