@@ -133,7 +133,10 @@ for book in data:
 del språk["English"], språk[""] #Sletter språk og verdi for engelsk og bøker uten spesifisert språk. Engelsk fordi det er mer interessant å se på hvilke ikke-engelske bøker som er på listen.
 
 språkliste = list(språk.items())
-sortert = sorted(språkliste, key=lambda x: x[1], reverse=True) #Bruker sorted funksjonen for å sortere dem etter forekomst, slik at kakediagram ser ryddig ut
+#Bruker sorted funksjonen for å sortere dem etter forekomst, slik at kakediagram ser ryddig ut.
+#Jeg kunne evt. gjort noe mer manuelt enn å bruke sorted-funksjonen, ved å skrive en egen sorteringsalgoritme
+sortert = sorted(språkliste, key=lambda x: x[1], reverse=True) 
+
 
 #Sorterer språk og forekomst inn i lister jeg kan bruke til å lage kakediagrammet
 data = []

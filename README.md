@@ -15,7 +15,7 @@ Hvis du vil bruke datasettet anbefaler jeg å installere extensionen "Rainbow CS
 
 
 ## Hva jeg vil finne ut av
-Med unntak av noen forbestemte ideer, som gjennomsnittlige sidetall, har jeg stort sett funnet ut av ting etter hvert som jeg har fått nye ideer. 
+Det er for mye interessant til å finne ut av alt, derfor har jeg valgt ut noen idéer:
 
 **Implementerte idéer:**
 
@@ -28,12 +28,6 @@ Med unntak av noen forbestemte ideer, som gjennomsnittlige sidetall, har jeg sto
 |   Største språk (uten engelsk)	|   X	|   X	|
 |   	|   	|   	|
 
-**Idéer videre:**
-- Se på statistikk for språk
-  - Får noen språk bedre ratings? 
-- Sammenheng mellom utgivelsesår og ratings
-  - Utvikling over tid?
-  
 
 ## For å kjøre koden:
 **.py fil:**
@@ -43,3 +37,26 @@ Med unntak av noen forbestemte ideer, som gjennomsnittlige sidetall, har jeg sto
 **.ipynb fil:**
 - Krav: matplotlib- og pandas-bibliotekene
 - Anbefalinger: - 
+
+**ekstra:**
+- Terminalen *må* ha utf-8 encoding, da det er enkelte navn på språk og bøker som ikke støttes ellers (planen er å legge dette inn i koden senere)
+
+# Tanker og ting:
+## "Manuell" vs Pandas
+For arbeid med datasett er Pandas den soleklare vinneren. Tankegangen og fremgangsmåten er stort sett det samme, men Pandas har allerede innebygd funksjonene jeg ellers ville skrevet manuelt. 
+
+**Noen tanker:**
+
+Jeg synes også Pandas sine "bins" gjorde ting mye lettere, samme med funksjonen for å ta gjennomsnitt av en kolonne. 
+
+For kakediagrammet med språk brukte jeg med manuell løsning 25 linjer, mens Pandas bare trengte 9. Dessuten var det mye enklere å telle og sortere med Pandas. 
+
+Ekstrapoeng til Pandas: Jeg måtte ikke gå inn for å fjerne "tomme" språk selv, da dette skjer av seg selv
+
+## Videre utvikling
+Jeg synes det var mye interessant data i datasettet, og jeg måtte begrense meg litt for å velge ut hva jeg ville vise fram. Hvis jeg jobber med datasettet videre, er dette blant tingene jeg tenker kunne vært gøy å se på:
+
+- Boktitler - er det noen ord eller strukturer som går igjen?
+- Forhold mellom språk og rating - er noen språk mer tilgivende?
+- Hvordan har ting utviklet seg over tid? (utgivelsesår, ratings, sidetall)
+- Bokomslag - det er linket til bokomslag i datasettet, med 99% completeness i følge [kilderepoet](https://github.com/scostap/goodreads_bbe_dataset/blob/main/README.md). Det kunne vært interessant å analysere disse; man kan se på farger eller lage en AI modell som kan forutsi sjanger basert på omslaget
