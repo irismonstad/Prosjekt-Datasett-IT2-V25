@@ -31,15 +31,17 @@ Det er for mye interessant til å finne ut av alt, derfor har jeg valgt ut noen 
 
 ## For å kjøre koden:
 **.py fil:**
-- Krav: matplotlib-biblioteket
+- Krav: 
+  - matplotlib-biblioteket
+  - terminalen *må* ha utf-8 encoding, da det er enkelte navn på språk og bøker som ikke støttes ellers (planen er å legge dette inn i koden senere)
+
 - Anbefalinger: -
 
 **.ipynb fil:**
-- Krav: matplotlib- og pandas-bibliotekene
-- Anbefalinger: - 
+- Krav: 
+  - matplotlib- og pandas-bibliotekene
 
-**ekstra:**
-- Terminalen *må* ha utf-8 encoding, da det er enkelte navn på språk og bøker som ikke støttes ellers (planen er å legge dette inn i koden senere)
+- Anbefalinger: - 
 
 # Tanker og ting:
 ## "Manuell" vs Pandas
