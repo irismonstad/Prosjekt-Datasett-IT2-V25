@@ -23,7 +23,7 @@ Det er for mye interessant til å finne ut av alt, derfor har jeg valgt ut noen 
 |---	|---	|---	|
 |   Gjennomsnittlig sidetall	|   X	|   X	|
 |   Stolpediagram sidetall	|   X	|   X	|
-|   Forhold numratings + rating	|   X	|   	|
+|   Forhold numratings + rating	|   X	|   X	|
 |   Forekomst av sjangre	|   X	|   X	|
 |   Største språk (uten engelsk)	|   X	|   X	|
 |   	|   	|   	|
